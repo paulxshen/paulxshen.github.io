@@ -1,3 +1,4 @@
+### Summary
 **Paul Shen**  
 
 Machine Learning Engineer | Electrical Engineer | Software Engineer  
@@ -22,7 +23,7 @@ Research preprint, conference submission in progress. 2020.
 [Karenina IO: Multilingual Grammar & Style Correction Web App with Natural Language Processing](https://www.karenina.io)  
 
 **Opto-electronics, optics, photonics**  
-[Gain and noise characteristics of an erbium doped fiber amplifier (EDFA) and ring laser](www.paulxshen.github.io/edfa.pdf)  
+[Gain and noise characteristics of an erbium doped fiber amplifier (EDFA) and ring laser](https://paulxshen.github.io/edfa.pdf)  
 Stanford APPHYS 304 Course Project. 2014.  
 
 **Process engineering, mechatronics product design**  
@@ -55,7 +56,7 @@ Basic: French, Spanish, Cantonese
 •	Control systems: optimal control, MPC, dynamical systems, PID, state estimation, Kalman filter, optimization  
 •	Statistics: regressions & hypothesis testing, stochastic processes, general linear models, *mixed effect models  
 
-**Medical sciences and biotech** 
+**Medical sciences and biotech**  
 •	Completed 2.5 years of MD program including basic sciences and half of core clinical rotations, passed Step 1 Boards  
 •	Coursework: gross anatomy, pathology, epidemiology, pharmacology, genetics  
 •	Clinical rotations: pediatrics, family medicine, psychiatry, neurology, anesthesia  
