@@ -1,36 +1,39 @@
-Paul Shen
-
+**Paul Shen**
 Machine Learning Engineer | Electrical Engineer | Software Engineer  
 MS BS Stanford University, USA citizen  
 650-924-9206 | pxshen@alumni.stanford.edu | https://www.linkedin.com/in/paulxshen/  
-
 Stanford electrical engineering masters alum applying machine learning, data science, signal processing, and control systems to real world challenges. Looking for my next adventure! 
 
 ## Academics
 Stanford University, MS Electrical Engineering, BS Mathematics, 2014
 Indiana University School of Medicine, former MD candidate, 2018
 
-## Portfolio 
-### Reinforcement learning, control systems
-[Neural ODE for Differentiable Reinforcement Learning and Optimal Control: Cartpole Problem Revisited](https://medium.com/swlh/neural-ode-for-reinforcement-learning-and-nonlinear-optimal-control-cartpole-problem-revisited-5408018b8d71) Research preprint, conference submission in progress 2020
-### Full stack software engineering, natural language processing 
-[Karenina IO: Multilingual Grammar & Style Correction Web App with Natural Language Processing](www.karenina.io) 2020
-### Opto-electronics, optics, photonics 
-[Gain and noise characteristics of an erbium doped fiber amplifier (EDFA) and ring laser](www.paulxshen.github.io/edfa.pdf) Stanford APPHYS 304 Course Project 2014
-### Process engineering, mechatronics product design
-Novel self rinsing wet electrostatic precipitator for air purification. Prototyping in progress 2020
+### Portfolio 
+**Reinforcement learning, control systems**
+[Neural ODE for Differentiable Reinforcement Learning and Optimal Control: Cartpole Problem Revisited](https://medium.com/swlh/neural-ode-for-reinforcement-learning-and-nonlinear-optimal-control-cartpole-problem-revisited-5408018b8d71)
+Research preprint, conference submission in progress. 2020.
+**Full stack software engineering, natural language processing** 
+[Karenina IO: Multilingual Grammar & Style Correction Web App with Natural Language Processing](https://www.karenina.io)
+**Opto-electronics, optics, photonics**
+[Gain and noise characteristics of an erbium doped fiber amplifier (EDFA) and ring laser](www.paulxshen.github.io/edfa.pdf)
+Stanford APPHYS 304 Course Project. 2014.
+**Process engineering, mechatronics product design**
+Novel self rinsing wet electrostatic precipitator for air purification. Prototype. 2020.
 
-Work
-2019	Medical NLP startup 	Cofounder (YCombinator ‘S19 interview finalist), NLP, full stack software engineer
-2012	Hewlett Packard 	Electrical engineering intern: RF/microwave antenna design. Received full time offer.
-2010	Stanford University 	Electrical engineering research: image processing & time series analysis of functional MRI data
+### Work
+**Medical NLP startup**
+Cofounder. YCombinator ‘S19 interview finalist. 2019.
+**Hewlett Packard**
+Electrical engineering intern: RF/microwave antenna design. Received full time offer. 2012.
+**Stanford University**
+Electrical engineering and radiology research assistant: image processing, time series analysis of functional MRI data. 2010.
 
-Languages
+### Languages
 Native: English, Chinese
 Basic: French, Spanish, Cantonese
 
-Skills (*Denotes basic working knowledge) 
-Software engineering, web development, machine learning, data science
+### Skills (* Denotes basic working knowledge) 
+**Software engineering, web development, machine learning, data science**
 •	Python (Pandas, *Django), Javascript (Node JS, *Vue), C++, HTML/CSS, Julia, Matlab
 •	NoSQL (Google Firebase), SQL, Stripe integration 
 •	GCP, *AWS, *Docker container devops
