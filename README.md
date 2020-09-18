@@ -5,7 +5,7 @@ Machine Learning Engineer | Electrical Engineer | Software Engineer
 MS BS Stanford University, USA citizen  
 650-924-9206 | pxshen@alumni.stanford.edu | https://www.linkedin.com/in/paulxshen/  
 
-Stanford electrical engineering masters alum applying machine learning, data science, signal processing, and control systems to real world challenges. Looking for my next adventure! 
+Stanford electrical engineering masters alum applying machine learning, data science, natural language processing, signal processing, and control systems to real world challenges. Looking for my next adventure! 
 
 ### Academics
 **Stanford University**  
@@ -45,11 +45,11 @@ Basic: French, Spanish, Cantonese
 
 ### Skills (* Denotes basic working knowledge) 
 **Software engineering, web development, machine learning, data science**  
-•	Python (Pandas, *Django), Javascript (Node JS, *Vue), C++, HTML/CSS, Julia, Matlab  
+•	Python (Numpy, Pandas, Flask, *Django), Javascript (Node JS, *Vue), C++, HTML/CSS, Julia, Matlab  
 •	NoSQL (Google Firebase), SQL, Stripe integration   
 •	GCP, *AWS, *Docker container devops  
 •	Machine learning: neural ODE, *CNN, transformers, Julia Flux, *TensorFlow, *PyTorch  
-•	Natural language processing: deep embeddings, Spacy, USE, GPT-2, *BERT  
+•	Natural language processing: deep embeddings, Spacy, USE, GPT-2, AWS Comprehend, Azure Text  
 
 **Signal processing, control systems, scientific computing**  
 •	Signal processing: image processing, DSP, Fourier analysis, wavelets, sensor fusion, time series ARIMA, MRI/CT reconstruction  
