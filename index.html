@@ -6,10 +6,20 @@
 
 <!-- Simply set the `src` attribute to your MD file and win -->
 <style>
-     body {font-family: Georgia !important;}
+
 
 
 </style>
 <zero-md src="README.md">
+ <!-- Declare `<template>` element as a child of `<zero-md>` -->
+ <template>
+   <!-- Wrap your own CSS styles inside a `<style>` tag -->
+   <style>
 
+   h1, h2, h3 {font-family: Georgia;}
+
+     p {font-family: Georgia;}
+
+   </style>
+ </template>
 </zero-md>
