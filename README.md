@@ -1,10 +1,10 @@
 ### Paul Shen  
 
-Machine Learning Engineer || NLP Engineer || Algorithms Software Engineer || Electrical Engineer  
+Machine Learning Engineer || Algorithms Software Engineer || Electrical Engineer  
 MS BS Stanford University, USA citizen  
 650-924-9206 || pxshen@alumni.stanford.edu || [paulxshen.github.io](paulxshen.github.io)  
 
-Stanford electrical engineering masters alum applying machine learning, data science, natural language processing (NLP), signal processing, and control systems to real world challenges. Looking for my next adventure!  
+Stanford electrical engineering masters alum applying machine learning, reinforcement learning, data science, natural language processing (NLP), signal processing, and control systems to real world challenges. Looking for my next adventure!  
 ___
 ### Academics
 **Stanford University**  
@@ -44,16 +44,17 @@ Basic: French, Spanish, Cantonese
 ___
 ### Skills
 (*denotes basic working knowledge)  
-**Software engineering, web development, machine learning, data science**  
+**Machine learning, signal processing, control systems, scientific computing**  
+•	Machine learning: DNN, CNN, RNN, neural ODE, transformers, Julia Flux, *TensorFlow, *PyTorch  
+•	Reinforcement learning: policy gradients, differentiable programming, deep Q, Markov processes  
+•	Control systems: optimal control, MPC, dynamical systems, PID, state estimation, Kalman filter, optimization  
+•	Signal processing: image processing, DSP, Fourier analysis, wavelets, sensor fusion, time series ARIMA, MRI/CT reconstruction  
+•	Natural language processing: deep embeddings, Spacy, USE, GPT-2, AWS Comprehend, Azure Text Analytics  
+
+**Full stack software engineering, web development, data science**  
 •	Python (Numpy, Pandas, Flask, *Django), Javascript (Node JS, *Vue), C++, HTML/CSS, Julia, Matlab  
 •	NoSQL (Google Firebase), SQL, Stripe integration   
-•	GCP, *AWS, *Docker container devops  
-•	Machine learning: neural ODE, *CNN, transformers, Julia Flux, *TensorFlow, *PyTorch  
-•	Natural language processing: deep embeddings, Spacy, USE, GPT-2, AWS Comprehend, Azure Text  
-
-**Signal processing, control systems, scientific computing**  
-•	Signal processing: image processing, DSP, Fourier analysis, wavelets, sensor fusion, time series ARIMA, MRI/CT reconstruction  
-•	Control systems: optimal control, MPC, dynamical systems, PID, state estimation, Kalman filter, optimization  
+•	Devops: GCP, *AWS, *Docker, *Kubernetes   
 •	Statistics: regressions & hypothesis testing, stochastic processes, general linear models, *mixed effect models  
 
 **Medical sciences and biotech**  
