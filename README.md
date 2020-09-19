@@ -2,7 +2,7 @@
 
 Machine Learning Engineer || NLP Engineer || Algorithms Software Engineer || Electrical Engineer  
 MS BS Stanford University, USA citizen  
-650-924-9206 || pxshen@alumni.stanford.edu || paulxshen.github.io  
+650-924-9206 || pxshen@alumni.stanford.edu || [paulxshen.github.io](paulxshen.github.io)  
 
 Stanford electrical engineering masters alum applying machine learning, data science, natural language processing (NLP), signal processing, and control systems to real world challenges. Looking for my next adventure!  
 ___
@@ -13,8 +13,7 @@ MS Electrical Engineering, BS Mathematics
 **Indiana University School of Medicine**  
 Former MD candidate, withdrew in good standing in 2018
 ___
-### Portfolio 
-(Hosted on paulxshen.github.io)  
+### Portfolio (on [paulxshen.github.io](paulxshen.github.io))  
 **Reinforcement learning, control systems**  
 [Neural ODE for Differentiable Reinforcement Learning and Optimal Control: Cartpole Problem Revisited](https://medium.com/swlh/neural-ode-for-reinforcement-learning-and-nonlinear-optimal-control-cartpole-problem-revisited-5408018b8d71)  
 Research preprint, conference submission in progress. 2020.  
