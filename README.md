@@ -1,19 +1,18 @@
-### Summary
-**Paul Shen**  
+### Paul Shen  
 
 Machine Learning Engineer || NLP Engineer || Algorithms Software Engineer || Electrical Engineer  
 MS BS Stanford University, USA citizen  
 650-924-9206 || pxshen@alumni.stanford.edu || https://www.linkedin.com/in/paulxshen/  
 
-Stanford electrical engineering masters alum applying machine learning, data science, natural language processing (NLP), signal processing, and control systems to real world challenges. Looking for my next adventure! 
-
+Stanford electrical engineering masters alum applying machine learning, data science, natural language processing (NLP), signal processing, and control systems to real world challenges. Looking for my next adventure!  
+___
 ### Academics
 **Stanford University**  
 MS Electrical Engineering, BS Mathematics  
 
 **Indiana University School of Medicine**  
 Former MD candidate, withdrew in good standing in 2018
-
+___
 ### Portfolio 
 **Reinforcement learning, control systems**  
 [Neural ODE for Differentiable Reinforcement Learning and Optimal Control: Cartpole Problem Revisited](https://medium.com/swlh/neural-ode-for-reinforcement-learning-and-nonlinear-optimal-control-cartpole-problem-revisited-5408018b8d71)  
@@ -28,7 +27,7 @@ Stanford APPHYS 304 Course Project. 2014.
 
 **Process engineering, mechatronics product design**  
 Novel self rinsing wet electrostatic precipitator for air purification. Prototype. 2020.  
-
+___
 ### Work
 **Medical NLP startup**  
 Cofounder. YCombinator ‘S19 interview finalist. 2019.  
@@ -38,12 +37,13 @@ Electrical engineering intern: RF/microwave antenna design. Received full time o
 
 **Stanford University**  
 Electrical engineering and radiology research assistant: image processing, time series analysis of functional MRI data. 2010.  
-
+___
 ### Languages
 Native: English, Chinese  
 Basic: French, Spanish, Cantonese  
-
-### Skills (* Denotes basic working knowledge) 
+___
+### Skills
+(*denotes basic working knowledge)  
 **Software engineering, web development, machine learning, data science**  
 •	Python (Numpy, Pandas, Flask, *Django), Javascript (Node JS, *Vue), C++, HTML/CSS, Julia, Matlab  
 •	NoSQL (Google Firebase), SQL, Stripe integration   
