@@ -43,8 +43,8 @@ Native: English, Chinese
 Basic: French, Spanish, Cantonese  
 ___
 ### Skills
-(*denotes basic working knowledge)  
-**Machine learning, signal processing, control systems, scientific computing**  
+(* denotes basic working knowledge)  
+**Machine learning, signal processing, control systems, scientific computing**   
 •	Machine learning: DNN, CNN, RNN, neural ODE, transformers, Julia Flux, *TensorFlow, *PyTorch  
 •	Reinforcement learning: policy gradients, differentiable programming, deep Q, Markov processes  
 •	Control systems: optimal control, MPC, dynamical systems, PID, state estimation, Kalman filter, optimization  
