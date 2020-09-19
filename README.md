@@ -48,7 +48,7 @@ ___
 •	Machine learning: DNN, CNN, RNN, neural ODE, transformers, Julia Flux, *TensorFlow, *PyTorch  
 •	Reinforcement learning: policy gradients, differentiable programming, deep Q, Markov processes  
 •	Control systems: optimal control, MPC, dynamical systems, PID, state estimation, Kalman filter, optimization  
-•	Signal processing: image processing, DSP, Fourier analysis, wavelets, sensor fusion, time series ARIMA, MRI/CT reconstruction  
+•	Signal processing: image processing, DSP, communications theory, Fourier analysis, wavelets, sensor fusion, time series ARIMA, MRI/CT reconstruction  
 •	Natural language processing: deep embeddings, Spacy, USE, GPT-2, AWS Comprehend, Azure Text Analytics  
 
 **Full stack software engineering, web development, data science**  
@@ -63,19 +63,20 @@ ___
 •	Clinical rotations: pediatrics, family medicine, psychiatry, neurology, anesthesia  
 
 **Electronics and electromagnetics**  
-•	Basic understanding of PCB design, power electronics, mixed signals, embedded systems  
-•	Antennas, RF systems, electromagnetics simulation  
+•	Basic PCB design, power electronics, mixed signals, embedded systems  
+•	Antennas, RF/microwave systems, electromagnetics simulation  
 
 **Photonics**  
 •	Design of imaging, camera, and laser systems  
 •	Fourier optics, quantum mechanics  
 •	Spectroscopy systems design: IR, Vis, Raman, laser scattering, remote sensing  
 
-**Mechanical engineering, chemical engineering**  
-•	Coursework in fluid dynamics, heat transfer, solid mechanics, thermodynamics  
-•	Coursework in physical chemistry, organic chemistry, statistical mechanics  
+**Chemical engineering, process engineering**
+•   Reactor design: photoreactors, electrostatic precipitators, wet scrubbers  
+•	Coursework in fluid dynamics, heat transfer, solid mechanics, thermodynamics, microfluidics  
+•	Coursework in physical chemistry, biochemistry, organic chemistry, statistical mechanics  
 
-**Mechanical and product design**  
+**Mechatronics and product design**  
 •	Plastics design for injection molding, silicone design, *sheet metal design  
 •	Enclosure design for consumer electronics and industrial instrumentation  
 •	Industrial design and formgiving  
