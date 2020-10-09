@@ -4,7 +4,7 @@ Machine Learning Engineer || Algorithms Software Engineer || Electrical Engineer
 MS BS Stanford University, USA citizen  
 650-924-9206 || pxshen@alumni.stanford.edu || [paulxshen.github.io](paulxshen.github.io)  
 
-Stanford electrical engineering masters alum applying machine learning, reinforcement learning, data science, natural language processing (NLP), signal processing, and control systems to real world challenges. Looking for my next adventure!  
+Stanford electrical engineering masters alum with a love for machine learning, reinforcement learning, control systems, signal processing, opto-electronics, and data science. Looking for my next adventure!  
 ___
 ### Academics
 **Stanford University**  
@@ -15,15 +15,17 @@ Former MD candidate, withdrew in good standing in 2018
 ___
 ### Portfolio (on [paulxshen.github.io](paulxshen.github.io))  
 **Reinforcement learning, control systems**  
-[Neural ODE for Differentiable Reinforcement Learning and Optimal Control: Cartpole Problem Revisited](https://medium.com/swlh/neural-ode-for-reinforcement-learning-and-nonlinear-optimal-control-cartpole-problem-revisited-5408018b8d71)  
-Research preprint, conference submission in progress. 2020.  
+[Differentiable Programming for Accelerated Reinforcement Learning and Optimal Control via Continuous Time Neural ODEs](https://medium.com/swlh/neural-ode-for-reinforcement-learning-and-nonlinear-optimal-control-cartpole-problem-revisited-5408018b8d71).
+Research preprint, conference submission in preparation. 2020.  
 
 **Full stack software engineering, natural language processing (NLP)**  
 [Karenina IO: Multilingual Grammar & Style Correction Web App with Natural Language Processing](https://www.karenina.io)  
 
 **Opto-electronics, optics, photonics**  
-[Gain and noise characteristics of an erbium doped fiber amplifier (EDFA) and ring laser](https://paulxshen.github.io/edfa.pdf)  
-Stanford APPHYS 304 Course Project. 2014.  
+[Design of a Smartphone Raman Spectrometer](https://paulxshen.github.io/Smartphone_Spectrometer.pdf).
+Stanford CHEMENG 345 Spectroscopy Course Project. 2014.  
+[Characterizing a Ti:Sapphire laser in mode locked and CW operation](https://paulxshen.github.io/TiSa.pdf).
+Stanford APPHYS 304 Lasers Laboratory Course Project. 2014.  
 
 **Process engineering, mechatronics product design**  
 Novel self rinsing wet electrostatic precipitator for air purification. Prototype. 2020.  
@@ -33,7 +35,7 @@ ___
 Cofounder. YCombinator ‘S19 interview finalist. 2019.  
 
 **Hewlett Packard**  
-Electrical engineering intern: RF/microwave antenna design. Received full time offer. 2012.  
+Electrical engineering intern: RF & microwave antenna design. Received full time offer. 2012.  
 
 **Stanford University**  
 Electrical engineering and radiology research assistant: image processing, time series analysis of functional MRI data. 2010.  
