@@ -28,9 +28,12 @@ Stanford CHEMENG 345 Spectroscopy Course Project. 2014.
 Stanford APPHYS 304 Lasers Laboratory Course Project. 2014.  
 
 **Process engineering, mechatronics product design**  
-Novel self rinsing wet electrostatic precipitator for air purification. Prototype. 2020.  
+Designing a self rinsing wet electrostatic precipitator for air purification. COVID passion project. 2020.  
 ___
 ### Work
+**Carnegie Mellon University**  
+Machine learning research assistant. Graph convolutional networks for predicting chemical and materials properties. Remote contract starting 10/2020
+
 **Medical NLP startup**  
 Cofounder. YCombinator ‘S19 interview finalist. 2019.  
 
