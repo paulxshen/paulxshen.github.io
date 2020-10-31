@@ -32,7 +32,7 @@ Designing a self rinsing wet electrostatic precipitator for air purification. CO
 ___
 ### Work
 **Carnegie Mellon University**  
-Machine learning research assistant. Graph convolutional networks for predicting chemical and materials properties. Remote contract starting 10/2020
+Machine learning research assistant. Graph convolutional networks for predicting chemical and materials properties. Remote. 2020
 
 **Medical NLP startup**  
 Cofounder. YCombinator ‘S19 interview finalist. 2019.  
