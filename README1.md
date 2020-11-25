@@ -1,6 +1,6 @@
 ### Paul Shen  
 
-Machine Learning Engineer || Software Engineer || Electrical Engineer  
+Machine Learning Engineer || Algorithms Software Engineer || Electrical Engineer  
 MS BS Stanford University, USA citizen  
 650-924-9206 || pxshen@alumni.stanford.edu || [paulxshen.github.io](paulxshen.github.io)  
 
@@ -18,6 +18,9 @@ ___
 [Differentiable Programming for Accelerated Reinforcement Learning and Optimal Control via Continuous Time Neural ODEs](https://medium.com/swlh/neural-ode-for-reinforcement-learning-and-nonlinear-optimal-control-cartpole-problem-revisited-5408018b8d71).
 Research preprint, conference submission in preparation. 2020.  
 
+**Full stack software engineering, natural language processing (NLP)**  
+[Karenina IO: Multilingual Grammar & Style Correction Web App with Natural Language Processing](https://www.karenina.io)  
+
 **Opto-electronics, optics, photonics**  
 [Design of a Smartphone Raman Spectrometer](https://paulxshen.github.io/Smartphone_Spectrometer.pdf).
 Stanford CHEMENG 345 Spectroscopy Course Project. 2014.  
@@ -29,7 +32,7 @@ Designing a self rinsing wet electrostatic precipitator for air purification. CO
 ___
 ### Work
 **Carnegie Mellon University**  
-Machine learning post-masters researcher. Designing graph convolutional networks and tensor field networks for computational quantum chemistry and materials discovery. Remote. 2020
+Machine learning research assistant. Graph convolutional networks for predicting chemical and materials properties. Remote. 2020
 
 **Medical NLP startup**  
 Cofounder. YCombinator ‘S19 interview finalist. 2019.  

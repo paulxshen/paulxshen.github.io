@@ -1,0 +1,132 @@
+Data in 3D Euclidean Space (75% there?)
+The 3D Euclidean Group -- E(3)
+Euclidean symmetry stems from the freedom to choose your coordinate system
+Empty 3D Euclidean space looks the same no matter whether you rotate, translate or invert it;  it has Euclidean symmetry. As soon as I put something in 3D space, I break some of those symmetries but “where” I put exactly I put it and how I describe the properties of my system is a matter of how I choose my coordinate system. There is no canonical way to choose a coordinate system in 3D space. We can choose any coordinate system and we can always transform between different coordinate systems using elements of Euclidean symmetry (3D translation, rotation, and inversion).
+Groups
+A group is made of operations called elements. One operation that is part of any group is the one that changes nothing, the identity. For any operation in a group, there is another operation in that group that undoes it, called the inverse. For rotations, the identity is the rotation of zero angle and the inverse of a rotation is the rotation along the same axis but with opposite angle. If you compose two operations (apply one operation after another) in the group, you get yet another operation in the group. As we mentioned in Ch 1, for 2D rotations, order doesn’t matter (you get the same group element), but for 3D rotations apply A then B or B then A will give you different group elements.
+
+The n-dimensional Euclidean group is the group of nD rotations, nD translations, and inversion $(x, y, z) \rightarrow (-x, -y, -z)$. It’s denoted as $E(n)$. The Euclidean group without inversion is called the special Euclidean group and denoted as $SE(n)$. The group of nD rotations and inversion is called the orthogonal group O(n), and similarly the group of nD rotations without inversion is called the special orthogonal group SO(n). Inversion itself is part of a very simple group. This group has two elements, the identity and the inversion operator, which is its own inverse. This group is denoted as $ \mathbb{Z}_2$, and can represent more than just inversion. It represents ANY representation of two elements where one element is the identity and the other element is its own inverse. More commonly, it’s called the cyclic group of order 2.
+Representations
+A representation of a group defines a specific form of a group. It specifies what the operations look like, which in our case will be linear operators or matrices, and what they are acting on, which in our case will be vector spaces. One vector space we are rather accustomed to is the one we live in, the vector space of 3D Euclidean space with the basis (x, y, z).
+
+Some representations are more concise than others. The most concise are called irreducible representations (also called irreps for short). 3x3 rotation matrices acting on Cartesian coordinates of 3D space is a reducible representation of 3D rotations. A Cartesian tensor may need multiple copies of indices (multiple copies of the vector space) to fully specify the tensor.
+
+For Euclidean neural networks, we use the irreducible representations of O(3). At first, this may seem strange, because E(3) contains both translations and rotations, but as we will explain later, the way we handle data in our network allows us to neatly separate out rotation and translation equivariance.
+
+The irreducible representation of SO(3) are the operations that act on functions grouped by their angular frequency, orthogonal polynomials of order $L$, made of specific monomials of the form $x^\alpha y^\beta z^\gamma$ where $\alpha + \beta + \gamma = l$. $l$ can be as small as 0 and as large as infinity, but is always an integer. Thus, the vector space associated with the irreducible representation of SO(3) is infinite dimensional. Yet, any specific irreducible representation has dimensions of $(2l + 1) \times (2l + 1)$; it’s a rotation matrix over $(2 L + 1)$ basis functions -- the subspace of $(2 l + 1)$ functions with angular frequency $L$.
+
+These functions are more commonly known as the spherical harmonics. These are the basis functions of the irreducible representations of SO(3). This means that every dimension of the vector space SO(3) acts on can be associated with a specific spherical harmonic. There are $(2 l + 1)$ functions with angular frequency $L$. These $(2 L + 1)$ functions are indexed by $L$ and $m$ which ranges from $-l \le m \le l$ and written as  $Y_{l m}$. The harmonic $Y_{l 0}  is always aligned along the current coordinate system’s $z$ axis.
+
+[PICTURE / PLOT OF SPHERICAL HARMONICS]
+
+Spherical harmonics are also the functions that solve the Laplace equation in 3D $\div^2 f = 0$ which is why they show up in many math and physics problems. In fact, this is why they are exactly the functions that describe the angular component of the hydrogenic orbitals.
+
+More formally the operations of the irreducible representation of SO(3) are the Wigner D matrices. The Wigner D matrices act on spherical harmonic tensors which rather than indices of (x, y, z) (those of the Cartesian tensors), they have indices of (1, y, z, x, xy, yz, 2z^2 - x^2 - y^2, zx, x^2 - y^2, …). No matter the complexity of a tensor, (if the quantities live in the same vector space) it can always be expressed in terms of the irreducible vector space of spherical harmonics with a single copy of x, y, z coordinates.
+Parity
+Spherical harmonics are notably the basis functions for $SO(3)$, not $O(3)$. This is because the spherical harmonics have definite parity. A spherical harmonic with even $L$ is even under parity, meaning the sign of the output does not change under inversion. A spherical harmonic with odd $L$ is odd under parity, meaning the sign of the output does change under inversion. Irreps of $O(3)$ can have either parity, the same parity of the corresponding spherical harmonic or opposite. Objects that have opposite parity to spherical harmonics are denoted with the prefix pseudo-. A scalar that with odd parity is a pseudoscalar. A vector with even parity is a pseudovector. Angular momentum and magnetic fields are examples of pseudovectors.
+
+The vector space of the irreps in our network can be either $SO(3)$ or $O(3)$; the choice is up to the user. The primary difference is if you want to have inversion symmetry, you must denote the parity of all datatypes in the network. If you just want rotations and translations and only be equivariant to $SE(3)$, the parity of all objects will match that of the corresponding $L$ spherical harmonic.
+Now with translation: Scalar, Vector, Tensor… fields
+Until now, we have swept under the rug as to how we will handle translation symmetry, dealing only with the mathematics of the group of 3D rotations and inversion $O(3)$. The reason for this is two-fold: A geometric tensor by itself does not necessarily live in a geometric space, like the one you and I exist in. We can however deliberately ascribe a geometric tensor(s) to a specific point in space (perhaps even all space or even just some of space). If we do this, then we have a tensor field.
+
+The second reason is that translation is naturally handled by our use of convolutions, which only use relative distances between points in space. We will discuss this in detail in the next chapter, Part 1 Ch 3. But for now, it’s worth pointing out that our networks will need to operate not only on geometric tensors but rather geometric tensors in 3D space, geometric tensor fields.
+Relationship of Euclidean Symmetry to Point Groups and Space Groups
+A subgroup of a group contains a subset of the operations of that group. Point groups are subgroups of 3D rotations and inversion, $O(3)$. Space groups are subgroups of $E(3)$. They contain translation, rotation, and inversion symmetries. Each space group is associated with one of the “crystallographic point groups”, 32 specific point groups. These crystallographic point groups are the only point groups that are compatible with being tiled in 3D space. If a neural network has Euclidean symmetry, it will preserve the symmetry of any subgroup, this is because the symmetry of the input will define the symmetry of the output. In fact, only a Euclidean Neural Network with zero input (or a constant scalar field signifying isotropic space) gives outputs with full Euclidean symmetry. Inputs lower the symmetry of the output to whatever the symmetry of the input is, a consequence that will be explored more in Part 2 Ch 3.
+Data types: Geometry and Geometric Tensors
+3D Geometry comprises points in 3D space $(x, y, z)$. The coordinates of 3D points are sensitive to the choice of coordinate system and transform predictably with a change of coordinate system $(x, y, z) \rightarrow (x’, y’, z’)$. Mathematical functions of (x, y, z) also transform predictably under coordinate transformation. For example, consider the polynomial $x^2$, if we rotate our coordinate system by 90 degrees around the z axis $(x, y, z) \rightarrow (-y, x, z)$ and $x^2 \rightarrow y^2$. The spherical harmonics, which are simply orthogonal polynomials comprising terms of degree $L$, must be transformed in the same way. What is special about spherical harmonics is that if I have a function comprising only of spherical harmonics of degree $L$ (of which there are $2 L + 1 different functions) and I rotate my system, my new function is still only comprising spherical harmonics of degree $L$, even if it’s a different specific combination. The subspace of spherical harmonics of degree $L$ is orthogonal to the subspaces of spherical harmonics of degree $\ne L$.
+
+Geometric tensors are multilinear functions that map between vector spaces. A 3x3 matrix can be thought of as having indices for it’s rows $a_1 = (x_1, y_1, z_1)$ and $a_2 = (x_2, y_2, z_2)$ for it’s columns. If we express the 3x3 matrix in polynomial form, we have $\sum_{ij} a^i_1 a^j_2 = x_1 x_2 + x_1 y_2 + x_1 z_2 + y_1 x_2 + y_1 y_2 + y_1 z_2 + z_1 x_2 + z_1 y_2 + z_1 z_2$. If we wish to rotate this function (and preserve its meaning), we need to rotate both the $a_1$ and $a_2$ indices or coordinate systems.
+
+Just as a text string can encode one word, a scientific report, a political speech, a eulogy, a novel, a love letter,... geometric tensors of the same type can carry substantially different meanings.
+
+Some of the most familiar geometric tensors are those that we associate with measurements of physical quantities. Scalars are used to describe energy, mass, charge, atomic number, etc. They do not change with rotation. They “scale” the magnitude of the interactions they partake in.
+
+Vectors are used to describe position in 3D space, velocity, acceleration, the axes of a coordinate system. These objects can be rotated by applying a 3x3 rotation matrix. The rotation matrix carries two “vector-like” indices of (x, y, z), one for the rows (the old coordinate system) and one for the columns (the new coordinate system).
+
+3x3 matrices are additionally used to describe properties such as moments of inertia and polarizability. Higher order tensors with more than two indices are extremely prevalent in solid state physics, material science and mechanical engineering.
+
+In addition to these more familiar numerical objects that are geometric tensors, there are other complex objects that are also geometric tensors. As we mentioned above, the hydrogenic atomic orbitals are geometric tensors.
+
+Hamiltonian matrices that represent the interactions between local atomic orbitals of a molecule is a geometric tensor with two indices (corresponding to the basis of atomic orbitals).
+
+Vector fields on a sphere like those used to indicate wind patterns or the polarization of the cosmic microwave background are geometric tensors with two indices, one of x,y,z indicating the vector direction, and the second index that describes the anisotropy of the vector field as a function of angle.
+
+The radial and angular analog of the Fourier transform (where we project a function onto a specific origin with radial functions and spherical harmonics) results in a linear combination basis functions that transforms as geometric tensors.
+
+In Part 1 Chapter 4 we will discuss how geometric tensors can be readily plotted, so we can gain an additional intuition for geometric tensors using visual aids.
+
+[ADD ALL THE PICTURES]
+Converting Cartesian tensors to spherical harmonic tensors
+
+So far, we have presented these tensors in a specific choice of basis, the basis of the indices (x, y, z). This is the Cartesian basis. But it’s not the only choice available to us. As mentioned above, we can also use the basis of spherical harmonics.
+
+One of the reasons we use the Cartesian basis to express the geometric tensors is because it is very easy to transform. To rotate a Cartesian tensor $T$, we simply apply the same $3\times3$ rotation matrix $R$ to each index.
+
+$T_{abc...} = R_{aa'} R_{bb'} R_{cc'} ... T_{a'b'c'...}$
+
+However, while the Cartesian basis simplifies the act of rotating an object, it obfuscates the many nice features of geometric tensors. For example, in the Cartesian basis, it’s not obvious that the sum of the diagonals of a 3x3 matrix (the trace) is an invariant. It’s also not obvious that the anti-symmetric components of a matrix transform in the same way as a vector. This becomes very clear if you write a 3x3 Cartesian matrix in the spherical harmonic basis.
+
+Spherical harmonics are an expressive basis for geometric tensors. There can be multiple elements of a spherical harmonic tensor that correspond to the same irrep as that spherical harmonic (with the same or opposite parity as the spherical harmonic). This means that the geometric tensor can contain multiple instances of objects that transform in the same way as that spherical harmonic (up to parity).
+
+First, let’s convert our 3x3 Cartesian matrix in one with spherical harmonic indices. This is very simple, because the (real) $L=1$ spherical harmonics are the same (up to normalization) as the functions (x, y, z) except by convention they are given in the order (y, z, x). So, to convert between a Cartesian 3x3 matrix to a spherical harmonic 3x3 matrix, we simply need to permute our components.
+
+[EXAMPLES FROM DATATYPES TUTORIAL]
+
+At this point, we’ve gained no new insight from using spherical harmonics, but there’s yet another trick we can use to simplify this geometric tensor. We can write any product of two spherical harmonics as a linear combination of single spherical harmonics \cite{https://en.wikipedia.org/wiki/Clebsch%E2%80%93Gordan_coefficients#Relation_to_spherical_harmonics, and stuff like it}. This means we can contract the two $L=1$ indices into a single spherical harmonic index. The coefficients of these linear combinations are derived from integrals over three spherical harmonics which are tedious to do. Fortunately, they can be tabulated and commonly are. These coefficients are more commonly referred to as the Clebsch-Gordan coefficients and show up in the addition of angular momentum in quantum mechanics, however they are useful beyond that specific use case. We use the Clebsch-Gordan coefficients to simplify our geometric tensors as we operate on them in Euclidean neural networks.
+
+Now, using a tensor of Clebsch-Gordan coefficients that has a three spherical harmonic index tensor (two for the input representations and one for the output representations), we can simplify our 3x3 matrix into a single index
+
+$$M_{ij} = C_{ijk} S_{k},$$
+
+where $S_k$ contains the same information as $M_{ij}$ but is now in irreducible form. To determine the appropriate sparse indexing of $k$ we use the selection rules for spherical harmonics. The selection rules tell us which combinations of two producted spherical harmonics have a non-trivial projection onto a single spherical harmonic (to save us from having to look through all the tabulated Clebsch-Gordan coefficients). Given the product of spherical harmonics with orders $L_1$ and $L_2$, $L_1 \otimes L_2$, their product will contribute a direct sum of irreducible representations $L_3$ of $|L_1 - L_2| \ge L_3 \ge L_1 + L_2$. From this, we can see that $\mathbbold{1} \otimes \mathbbold{1} = \mathbbold{0} \oplus \mathbbold{1} \oplus \mathbbold{2}$ and $k$ must therefore index the spherical harmonics $Y_{0,0}$, $Y_{1, -1}$, $Y_{1, 0}$, $Y_{1, 1}$, $Y_{2, -2}$, $Y_{2, -1}$, $Y_{2, 0}$, $Y_{2, 1}$, and $Y_{2, 2}$.
+
+We can check that this gives us the same number of degrees of freedom as the Cartesian tensor. We started with an arbitrary $3 \times 3$ matrix with 9 degrees of freedom and now have a 9 dimensional spherical tensor with a single index. Now, we can clearly see that a 3x3 matrix transforms as a scalar ($L=0$), a vector ($L=1$), and a symmetric, traceless quantity ($L=2$).
+
+We can also check that if we rotate our Cartesian matrix and rotate our single index spherical harmonic tensor, that we recover the same answer.
+Rotation Equivariant operations
+For any rotation equivariant operation, you can rotate either the inputs or the outputs and get the same answer.
+
+[Show block diagram from tensor field networks paper on layer equivariance]
+
+The operations on irreps that preserve rotation equivariance are quite restrictive. There are only three types of operations that preserve rotation equivariance:
+Scalar functions (Note, that these can be linear or nonlinear)
+Direct Sums of Representations (Concatenations)
+Direct Products of Representations (Tensor Products)
+
+Scalar functions are those that scale a tensor. Averaging is an example of a scalar function. If I have 3 vectors and average them, that is the same as a linear combination of equal weight.
+
+Direct sums are not really sums at all; they are instead concatenations. If I have two vectors that I would like to direct sum, I am essentially taking my two geometric tensors of a single vector and writing them down as a single geometric tensor of two vectors.
+
+Direct products, also called tensor products, are the most complicated and unintuitive operations that preserve equivariance. Tensor products of geometric tensors have a very specific form that allows us to contract two indices (on the same or separate tensors) into a new single index. This is advantageous because otherwise, as our data propagates through a network, it would keep incurring indices. This would not only be memory intensive but also not very useful, since most quantities we want to predict do not have many indices. We saw an example of a tensor product when we wrote our 3x3 matrix as a single index spherical harmonic tensor.
+
+
+Here’s one of the simplest illustrations for the need for a tensor product: How do you “multiply” two vectors? It turns out that there are three things you do. You can take the dot product between two vectors, which gives you a scalar. You can take the cross product between two vectors, which gives you another vector. Lastly, you can take the outer-product of the two vectors and get a 3 x 3 matrix, which can alternatively be written as a trace or sum along the diagonals (a scalar), an antisymmetric part (a vector) and the symmetric part (which transforms as L=2), same as our example in the above section. Secretly, the cross-product and the dot product are actually contained in the outer product. The geometric tensor product allows us to readily articulate all these possibilities.
+
+Tensor products are computed using tensors of Clebsch-Gordan coefficients with three spherical harmonic indices. The specifics of these indices depend on the objects being tensor produced but in general will be a sparse set of irreps. Tensor products in their most general form can be expensive to compute. Given the product of spherical harmonics with orders $L_1$ and $L_2$, $L_1 \otimes L_2$, their product will contribute a direct sum of irreducible representations $L_3$ of $|L_1 - L_2| \ge L_3 \ge L_1 + L_2$. This means that Clebsch-Gordan tensors grow quickly in size with contributions of higher order $L$ irreps. While $\mathbbold{1} \otimes \mathbbold{1} = \mathbbold{0} \oplus \mathbbold{1} \oplus \mathbbold{2}$ resulting in 9 degrees of freedom, $\mathbbold{3} \otimes \mathbbold{3} = \mathbbold{0} \oplus \mathbbold{1} \oplus \mathbbold{2} \oplus \mathbbold{3} \oplus \mathbbold{4}$ \oplus \mathbbold{5} \oplus \mathbbold{6}$ resulting in 49 degrees of freedom. For that reason, it is not uncommon to truncate contributions to a tensor product up to a maximum $L$.
+Projecting functions onto spherical harmonics
+We can project functions on spherical harmonics using analogous principles to a Fourier transform over the angular basis with or without a radial basis. In this way, we can express a local environment or neighborhood of points in terms of spherical harmonics expressed from a specific origin. This projection is itself a spherical harmonic tensor.
+
+For example in Figure~\ref{fig:tetra}, we project local point clouds directly onto spherical harmonics (with no radial function) on a specified origin, performing the angular equivalent of a Fourier transform, and store projection as a feature on a point. One can separately project angular geometric information onto the spherical harmonics and the radial information onto a separate radial basis, or interpret the magnitude of the spherical harmonic signal as radial information.
+
+If we consider our geometry as composed of infinitesimal points, we can express our geometry as a linear combination of Dirac delta functions. This simplifies the projection since we simply evaluate the spherical harmonic basis at the delta function location and sum. For the signals to represent radial distance as magnitude of the signal, we weight the coefficients by the radius.
+
+% MODIFY TO ACCOMMODATE BASIS ADJUSTMENT
+$$S_{lm} = \int |r| Y_{lm}(\hat{r}) \delta(\vec{r} - \vec{r}_d) dr = |r_d|Y_{lm}(\vec{r}_d)$$
+
+and do a linear re-weighing of the coefficients to accommodate for limited basis effects. In these projections, the width of signal peak due to an atom is governed by the radius from the origin and the maximum L used [PUT MATH HERE AND FIND A CITATION]. Additionally due to our limited basis, we have artifact peaks.
+These Fourier transforms can be used as a continuous basis with which to articulate local geometry. We can also use it to articulate distributions of tensors over space. We will use these principles for geometry generation tasks in Part 2 Ch 3.
+
+Projection of geometry onto spherical harmonics is also done for the SOAP kernel, Behler-Parinello, Bispectrum functions, and other descriptors [CITE PAPERS]. For some of these cases, the projection is for Gaussian blurring of the atomic orbitals rather than delta functions.
+Going from one to many indices
+Using Clebsch-Gordan coefficients we can convert a given spherical harmonic tensor to have an arbitrary number of equivariant indices. This can be useful in many of the cases that we gave above such as predicting matrices with two representations indices where the rows and columns correspond to hydrogenic orbitals as is the case for Hamiltonians of molecular systems, see Figure~\ref{fig:ham}. In cosmology, one could use a spherical tensor with one representation index corresponding to $L=1$ and another representation index corresponding to $L= 0 \oplus 1 \oplus ... \oplus L_{max}$  to represent the polarization of the cosmic microwave background. Euclidean neural networks can automatically manipulate these data types.
+
+Just as we use Clebsch-Gordan coefficients to convert two representation indices $j$ and $k$ into one $i$,
+$$ J \otimes K = J_{j} K_{k} C_{ijk} = I_{i},$$
+we can do the reverse, converting $k$ into $i$ and $j$
+$$K_{k} = C_{ijk} K_{k} = I_{i} \otimes J_{j}.$$
+
+To ensure that all degrees of freedom of the input are contained in the outputs, we must include Clebsch-Gordan coefficients up to $L_{max}^j + L_{max}^k$ in the first case or $L_{max}$ of $k$ in the second case.
+Invariance from Equivariance
+All invariants are computed from dot products of equivariant data types. A dot product is equivalent to a tensor product where the maximum $L$ of the output is $L=0$. The power spectrum of a spherical tensor is the dot product of a signal with itself. The bispectrum of a spherical tensor is the tensor product of a spherical tensor with itself followed by a dot product (and can readily generate hundreds of invariants for even relatively simple geometric tensors).
+
+Invariants are often used as descriptors for input into traditional machine learning techniques. This is particularly popular and effective for expressing local atomic environments of molecules, crystals, and other atomic systems [CITE SOAP BISPECTRUM BP]. If one creates a regression model based on invariants, then the prediction is guaranteed to be rotation invariant.
